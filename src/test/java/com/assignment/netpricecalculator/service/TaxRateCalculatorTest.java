@@ -1,6 +1,6 @@
-package com.assignment.netcalculator.service;
+package com.assignment.netpricecalculator.service;
 
-import com.assignment.netcalculator.service.impl.TaxRateServiceImpl;
+import com.assignment.netpricecalculator.service.impl.TaxRateServiceImpl;
 import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;

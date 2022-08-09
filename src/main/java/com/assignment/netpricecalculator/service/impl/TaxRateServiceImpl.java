@@ -1,6 +1,6 @@
-package com.assignment.netcalculator.service.impl;
+package com.assignment.netpricecalculator.service.impl;
 
-import com.assignment.netcalculator.service.TaxRateService;
+import com.assignment.netpricecalculator.service.TaxRateService;
 import org.springframework.stereotype.Service;
 
 import java.math.BigDecimal;

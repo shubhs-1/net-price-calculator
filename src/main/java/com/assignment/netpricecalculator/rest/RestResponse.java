@@ -1,4 +1,4 @@
-package com.assignment.netcalculator.rest;
+package com.assignment.netpricecalculator.rest;
 
 import lombok.Builder;
 import lombok.Data;

@@ -1,7 +1,7 @@
-package com.assignment.netcalculator.rest;
+package com.assignment.netpricecalculator.rest;
 
-import com.assignment.netcalculator.exception.DataNotFoundException;
-import com.assignment.netcalculator.exception.InvalidParameterPassedException;
+import com.assignment.netpricecalculator.exception.DataNotFoundException;
+import com.assignment.netpricecalculator.exception.InvalidParameterPassedException;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.ControllerAdvice;

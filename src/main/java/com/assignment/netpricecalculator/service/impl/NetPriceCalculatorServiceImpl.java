@@ -1,8 +1,8 @@
-package com.assignment.netcalculator.service.impl;
+package com.assignment.netpricecalculator.service.impl;
 
-import com.assignment.netcalculator.exception.DataNotFoundException;
-import com.assignment.netcalculator.service.PriceCalculatorService;
-import com.assignment.netcalculator.service.TaxRateService;
+import com.assignment.netpricecalculator.exception.DataNotFoundException;
+import com.assignment.netpricecalculator.service.NetPriceCalculatorService;
+import com.assignment.netpricecalculator.service.TaxRateService;
 import lombok.extern.log4j.Log4j2;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -11,7 +11,7 @@ import java.math.BigDecimal;
 
 @Log4j2
 @Service
-public class PriceCalculatorServiceImpl implements PriceCalculatorService {
+public class NetPriceCalculatorServiceImpl implements NetPriceCalculatorService {
 
     @Autowired
     TaxRateService taxRateService;

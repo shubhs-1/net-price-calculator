@@ -1,4 +1,4 @@
-package com.assignment.netcalculator.service;
+package com.assignment.netpricecalculator.service;
 
 import java.math.BigDecimal;
 import java.util.Map;

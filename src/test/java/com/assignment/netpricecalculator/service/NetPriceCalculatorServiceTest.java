@@ -1,13 +1,8 @@
-package com.assignment.netcalculator.service;
+package com.assignment.netpricecalculator.service;
 
 
-import com.assignment.netcalculator.controller.PriceController;
-import com.assignment.netcalculator.exception.DataNotFoundException;
-import com.assignment.netcalculator.exception.InvalidParameterPassedException;
-import com.assignment.netcalculator.model.GrossPriceRequest;
-import com.assignment.netcalculator.model.NetPriceResponse;
-import com.assignment.netcalculator.rest.RestResponse;
-import com.assignment.netcalculator.service.impl.PriceCalculatorServiceImpl;
+import com.assignment.netpricecalculator.exception.DataNotFoundException;
+import com.assignment.netpricecalculator.service.impl.NetPriceCalculatorServiceImpl;
 import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
@@ -23,9 +18,9 @@ import java.util.HashMap;
 import java.util.Map;
 
 @RunWith(MockitoJUnitRunner.class)
-public class PriceCalculatorServiceTest {
+public class NetPriceCalculatorServiceTest {
     @InjectMocks
-    private PriceCalculatorService priceCalculatorService = Mockito.spy( new PriceCalculatorServiceImpl() );
+    private NetPriceCalculatorService netPriceCalculatorService = Mockito.spy( new NetPriceCalculatorServiceImpl() );
 
     @Mock
     private TaxRateService taxRateService;
@@ -38,14 +33,14 @@ public class PriceCalculatorServiceTest {
     @Test(expected = DataNotFoundException.class)
     public void shouldThrowDataNotFoundExceptionWhenTaxRateForGivenCountryIsNotFound() {
         Mockito.doReturn(getTaxByCountryMap()).when(taxRateService).getTaxRateByCountry();
-        priceCalculatorService.calculateNetPrice(BigDecimal.valueOf(123.51), "IN");
+        netPriceCalculatorService.calculateNetPrice(BigDecimal.valueOf(123.51), "IN");
     }
 
     @Test
     public void shouldCorrectlyCalculateNetPriceIfTaxRateIsFoundForGivenCountry() {
         Mockito.doReturn(getTaxByCountryMap()).when(taxRateService).getTaxRateByCountry();
-        BigDecimal netPrice1 = priceCalculatorService.calculateNetPrice(BigDecimal.valueOf(1.99), "FR");
-        BigDecimal netPrice2 = priceCalculatorService.calculateNetPrice(BigDecimal.valueOf(100), "DE");
+        BigDecimal netPrice1 = netPriceCalculatorService.calculateNetPrice(BigDecimal.valueOf(1.99), "FR");
+        BigDecimal netPrice2 = netPriceCalculatorService.calculateNetPrice(BigDecimal.valueOf(100), "DE");
 
         Assert.assertEquals(netPrice1, BigDecimal.valueOf(1.6));
         Assert.assertEquals(netPrice2, BigDecimal.valueOf(81.0));

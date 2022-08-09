@@ -1,4 +1,4 @@
-package com.assignment.netcalculator.exception;
+package com.assignment.netpricecalculator.exception;
 
 public class DataNotFoundException extends RuntimeException {
     public DataNotFoundException() {}
