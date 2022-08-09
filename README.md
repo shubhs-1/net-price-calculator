@@ -7,13 +7,21 @@ To formulate,
 Gross price = Net price + Tax
 
 Below data was collected from official source regarding VAT for few countries. I have used this data in the application.
+
 "DE": 0.19
+
 "FR": 0.20
+
 "BE": 0.21
+
 "CY": 0.19
+
 "DK": 0.25
+
 "FI": 0.24
+
 "LU": 0.17
+
 "HU": 0.27
 
 
