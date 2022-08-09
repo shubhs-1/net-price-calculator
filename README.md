@@ -49,14 +49,14 @@ Below data was collected from official source regarding VAT for few countries. I
     ```
     
 ## cURL for Postman
-    ```
+  ```
     curl --location --request POST 'http://localhost:8080/api/v1/calculate/netprice' \
     --header 'Content-Type: application/json' \
     --data-raw '{
         "grossPrice": 100,
         "countryIso": "DE"
     }'
-    ```
+  ```
 
 
 ## How to Import cURL in Postman
