@@ -47,6 +47,28 @@ Below data was collected from official source regarding VAT for few countries. I
     cd PROJECT_DIRECTORY
     java -jar build/libs/netpricecalculator-0.0.1-SNAPSHOT.jar
     ```
+    
+## cURL for Postman
+    ```
+    curl --location --request POST 'http://localhost:8080/api/v1/calculate/netprice' \
+    --header 'Content-Type: application/json' \
+    --data-raw '{
+        "grossPrice": 100,
+        "countryIso": "DE"
+    }'
+    ```
 
-## API Responses using Postman
+
+## How to Import cURL in Postman
+- Open Postman -> Import -> Raw Text -> Paste above cURL -> Import
+
+
+## Example API Responses using Postman
+<img width="1015" alt="image" src="https://user-images.githubusercontent.com/30280454/183746811-53e7a986-194e-4fa4-816e-edab0aa4c821.png">
+
+<img width="1014" alt="image" src="https://user-images.githubusercontent.com/30280454/183747065-57efb5d6-ab93-419f-8e42-a11d3f465e1d.png">
+
+<img width="1012" alt="image" src="https://user-images.githubusercontent.com/30280454/183747206-a27f9680-ae0c-48f6-a559-3e997385144f.png">
+
+<img width="1010" alt="image" src="https://user-images.githubusercontent.com/30280454/183747343-25d5df4a-807a-4e72-97b3-d829c34b58b5.png">
 
