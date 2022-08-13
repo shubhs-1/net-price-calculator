@@ -26,8 +26,8 @@ Below data was collected from official source regarding VAT for few countries. I
 
 
 ## Requirements
-- Java 1.8
-- Gradle 7.5
+- Java v1.8
+- Gradle v7.5
 - Unix environment
 
 
@@ -63,7 +63,7 @@ Below data was collected from official source regarding VAT for few countries. I
 - Open Postman -> Import -> Raw Text -> Paste above cURL -> Import
 
 
-## Example API Responses using Postman
+## Sample API Responses using Postman
 <img width="1015" alt="image" src="https://user-images.githubusercontent.com/30280454/183746811-53e7a986-194e-4fa4-816e-edab0aa4c821.png">
 
 <img width="1014" alt="image" src="https://user-images.githubusercontent.com/30280454/183747065-57efb5d6-ab93-419f-8e42-a11d3f465e1d.png">
