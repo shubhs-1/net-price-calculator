@@ -9,6 +9,10 @@ import org.springframework.stereotype.Service;
 
 import java.math.BigDecimal;
 
+/**
+ * Class implementing NetPriceCalculatorService interface
+ * @author Shubham Kalaria
+ */
 @Log4j2
 @Service
 public class NetPriceCalculatorServiceImpl implements NetPriceCalculatorService {
@@ -16,6 +20,12 @@ public class NetPriceCalculatorServiceImpl implements NetPriceCalculatorService 
     @Autowired
     TaxRateService taxRateService;
 
+    /**
+     * Method to calculate net price given grossPrice and countryIso
+     * @param grossPrice gross price of standard taxable goods
+     * @param countryIso country iso
+     * @return net price
+     */
     @Override
     public BigDecimal calculateNetPrice(BigDecimal grossPrice, String countryIso) {
         try {

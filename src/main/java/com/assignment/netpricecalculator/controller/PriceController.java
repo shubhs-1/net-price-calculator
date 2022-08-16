@@ -12,6 +12,10 @@ import org.springframework.web.bind.annotation.*;
 
 import java.math.BigDecimal;
 
+/**
+ * Rest Controller to expose REST API endpoints related to net price calculation
+ * @author Shubham Kalaria
+ */
 @Log4j2
 @RestController
 @RequestMapping(value = "/api/v1/calculate")
@@ -20,6 +24,11 @@ public class PriceController {
     @Autowired
     NetPriceCalculatorService netPriceCalculatorService;
 
+    /**
+     * API Endpoint to provide net price given gross price and country iso
+     * @param consumerRequest
+     * @return
+     */
     @PostMapping("/netprice")
     public RestResponse getNetPrice(@RequestBody ConsumerRequest consumerRequest) {
         if(ObjectUtils.isEmpty(consumerRequest.getGrossPrice()) || ObjectUtils.isEmpty(consumerRequest.getCountryIso())) {

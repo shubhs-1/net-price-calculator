@@ -5,6 +5,10 @@ import lombok.Data;
 
 import java.math.BigDecimal;
 
+/**
+ * POJO class to represent consumer request
+ * @author Shubham Kalaria
+ */
 @Data
 @Builder
 public class ConsumerRequest {

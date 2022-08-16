@@ -7,9 +7,17 @@ import java.math.BigDecimal;
 import java.util.HashMap;
 import java.util.Map;
 
+/**
+ * Class implementing the TaxRate interface
+ * @author Shubham Kalaria
+ */
 @Service
 public class TaxRateServiceImpl implements TaxRateService {
 
+    /**
+     * Method to get tax rate for all the countries
+     * @return taxRate to courtryIso mapping
+     */
     @Override
     public Map<String, BigDecimal> getTaxRateByCountry() {
         Map<String, BigDecimal> taxRateMap = new HashMap<>();
